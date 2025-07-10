@@ -1,0 +1,19 @@
+{
+  "name": "STM32 Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "marus25.cortex-debug",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.remote-containers"
+  ],
+  // "mounts": [
+  //   "source=${localEnv:HOME}/.stm32tools,target=/root/.stm32tools,type=bind"
+  // ],
+  "remoteUser": "root"
+}
