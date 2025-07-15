@@ -1,4 +1,4 @@
-# Install script for directory: /home/bashar/STM-Projects/MeterFirmware/cmake/stm32cubemx
+# Install script for directory: /home/bashar/try-arena/NewSinglePhaseMeterFirmware/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

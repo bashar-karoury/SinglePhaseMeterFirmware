@@ -1,1 +1,5 @@
+.mxproject
+compile_commands.json
+cmake_install.cmake
 build/
+CMakeFiles

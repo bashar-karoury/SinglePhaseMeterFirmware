@@ -3,17 +3,32 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "marus25.cortex-debug",
+        "ms-vscode.cmake-tools",
+        "webfreak.debug",
+        "ms-vscode.remote-containers",
+        "STMicroelectronics.stm32-vscode-extension-pack"
+      ]
+    }
   },
-  "extensions": [
-    "ms-vscode.cpptools",
-    "marus25.cortex-debug",
-    "ms-vscode.cmake-tools",
-    "ms-vscode.remote-containers"
-  ],
   // "mounts": [
   //   "source=${localEnv:HOME}/.stm32tools,target=/root/.stm32tools,type=bind"
   // ],
-  "remoteUser": "root"
+  "remoteUser": "root",
+  "onCreateCommand": "echo STM32 DevContainer created",
+  "postStartCommand": "code --force --install-extension marus25.cortex-debug",
+  // "postStartCommand": "echo '>> All extensions should now be enabled. If not, reload window manually.'",
+  "runArgs": [
+  "--privileged",
+  "--device=/dev/bus/usb",
+  "-v", "/dev/bus/usb:/dev/bus/usb"
+  ]
 }
