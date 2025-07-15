@@ -1,0 +1,22 @@
+# ninja log v5
+411	735	1752601722744205933	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj	d33187dd7366f1d
+323	672	1752601722681205929	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	71c4e289a9f894eb
+366	675	1752601722684205929	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj	3ade9e2f3406c668
+361	671	1752601722679205929	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj	b112aa5e513dcf8f
+420	666	1752601722673205929	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj	ec7c45c4e6f138e5
+4	420	1752601722426205914	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Src/system_stm32f4xx.c.obj	1f912cddd4f6c37f
+3	193	1752601722202205900	CMakeFiles/MeterFirmware.dir/Src/sysmem.c.obj	530c157145696d33
+115	464	1752601722466205916	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj	30b1b1eb8ce7871a
+3	356	1752601722359205910	CMakeFiles/MeterFirmware.dir/Src/stm32f4xx_it.c.obj	42a2159aef2b2eee
+3	408	1752601722413205913	CMakeFiles/MeterFirmware.dir/Src/main.c.obj	6a571682e8079bc4
+459	702	1752601722712205931	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	62de38b776f68f71
+5	366	1752601722375205911	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj	a7615099145f1d0a
+193	458	1752601722466205916	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	63ed24aa302bac2
+3	323	1752601722331205908	CMakeFiles/MeterFirmware.dir/Src/stm32f4xx_hal_msp.c.obj	c9d5ddb94f9b6d23
+230	585	1752601722594205924	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj	1974d78783cc2121
+735	819	1752601722827205938	MeterFirmware.elf	f6a85b90b900256
+464	691	1752601722699205930	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	69811ca484f572b3
+4	230	1752601722238205902	CMakeFiles/MeterFirmware.dir/Src/syscalls.c.obj	eff3ee5e1f9c7453
+6	484	1752601722491205918	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj	e514845af732c39e
+4	483	1752601722490205918	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj	4fd9a582c08c6373
+4	115	1752601722125205896	CMakeFiles/MeterFirmware.dir/startup_stm32f411xe.s.obj	a3d2c204646b86b0
