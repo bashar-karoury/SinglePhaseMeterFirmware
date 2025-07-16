@@ -14,7 +14,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "CubeProg: Flash project (SWD)",
+            "label": "Flash",
             "command": "STM32_Programmer_CLI",
             "args": [
                 "--connect",
@@ -28,6 +28,8 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
+            
+
             "problemMatcher": []
         },
         {
@@ -48,7 +50,13 @@
             "preset": "${command:cmake.activeBuildPresetName}",
             "group": "build",
             "problemMatcher": [],
-            "detail": "CMake template clean rebuild task"
+            "detail": "CMake template clean rebuild task",
+            "options": {
+                "cwd": "${fileDirname}",
+                "statusbar": {
+                    "hide" : true
+                }
+            },
         },
         {
             "type": "shell",
@@ -58,7 +66,10 @@
                 "--list"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "hide" : true
+                }
             },
             "problemMatcher": []
         },
@@ -74,7 +85,10 @@
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}",
+                "statusbar": {
+                    "hide" : true
+                }
             },
             "problemMatcher": [
                 "$gcc"
