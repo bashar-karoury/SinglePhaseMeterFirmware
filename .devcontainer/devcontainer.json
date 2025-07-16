@@ -24,8 +24,9 @@
   // ],
   "remoteUser": "root",
   "onCreateCommand": "echo STM32 DevContainer created",
-  "postStartCommand": "code --force --install-extension marus25.cortex-debug",
+  // "postStartCommand": "code --force --install-extension marus25.cortex-debug",
   // "postStartCommand": "echo '>> All extensions should now be enabled. If not, reload window manually.'",
+  "postStartCommand": "rm -rf build",
   "runArgs": [
   "--privileged",
   "--device=/dev/bus/usb",

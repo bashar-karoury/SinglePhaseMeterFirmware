@@ -1,0 +1,4 @@
+// settings.json (user or workspace)
+{
+    "cmake.configureOnOpen": false
+}
