@@ -15,8 +15,7 @@
         "ms-vscode.cmake-tools",
         "webfreak.debug",
         "ms-vscode.remote-containers",
-        "STMicroelectronics.stm32-vscode-extension-pack",
-        "actboy168.tasks"
+        "STMicroelectronics.stm32-vscode-extension-pack"
       ]
     }
   },
