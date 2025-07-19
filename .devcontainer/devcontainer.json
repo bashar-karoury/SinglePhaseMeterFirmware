@@ -23,11 +23,8 @@
   //   "source=${localEnv:HOME}/.stm32tools,target=/root/.stm32tools,type=bind"
   // ],
   "remoteUser": "root",
-  // "onCreateCommand": "echo STM32 DevContainer created",
-  // "postStartCommand": "code --force --install-extension marus25.cortex-debug",
-  // "postStartCommand": "echo '>> All extensions should now be enabled. If not, reload window manually.'",
+
   "onCreateCommand": "rm -rf build",
-  "postStartCommand": "code -r .",
   "runArgs": [
   "--privileged",
   "--device=/dev/bus/usb",

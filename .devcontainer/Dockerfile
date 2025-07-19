@@ -1,2 +1,3 @@
 # FROM stm32-base:latest
-FROM ghcr.io/bashar-karoury/stm32-dev:latest
+# FROM stm32-extensions:latest
+FROM docker.io/basharalkaroury/stm32-dev-env
