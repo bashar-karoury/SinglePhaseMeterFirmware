@@ -37,6 +37,12 @@ enable_language(C ASM)
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
 
+# === FreeRTOS Path Setup ===
+set(FREERTOS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/middleware/freertos")
+set(FREERTOS_PORT_DIR "${FREERTOS_DIR}/portable/ARM_CM4F")
+set(FREERTOS_SOURCE_DIR "${FREERTOS_DIR}/Src")
+
+
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
@@ -48,16 +54,28 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    ${FREERTOS_SOURCE_DIR}/tasks.c
+    ${FREERTOS_SOURCE_DIR}/queue.c
+    ${FREERTOS_SOURCE_DIR}/list.c
+    ${FREERTOS_SOURCE_DIR}/timers.c
+    ${FREERTOS_SOURCE_DIR}/event_groups.c
+    ${FREERTOS_SOURCE_DIR}/heap_4.c           # Or heap_1.c, etc.
+    ${FREERTOS_PORT_DIR}/port.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    ${FREERTOS_DIR}/include
+    ${FREERTOS_PORT_DIR}
 )
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined symbols
+    ARM_MATH_CM4
+    __FPU_PRESENT=1
+    configUSE_PREEMPTION=1
 )
 
 # Add linked libraries
