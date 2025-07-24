@@ -84,11 +84,17 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+  volatile uint32_t _CFSR = SCB->CFSR;
+  volatile uint32_t _HFSR = SCB->HFSR;
+  volatile uint32_t _DFSR = SCB->DFSR;
+  volatile uint32_t _AFSR = SCB->AFSR;
+  volatile uint32_t _MMFAR = SCB->MMFAR;
+  volatile uint32_t _BFAR = SCB->BFAR;
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+    // You can inspect the above variables in a debugger to determine the cause of the hard fault.
     /* USER CODE END W1_HardFault_IRQn 0 */
   }
 }
@@ -141,15 +147,15 @@ void UsageFault_Handler(void)
 /**
   * @brief This function handles System service call via SWI instruction.
   */
-void SVC_Handler(void)
-{
-  /* USER CODE BEGIN SVCall_IRQn 0 */
+// void SVC_Handler(void)
+// {
+//   /* USER CODE BEGIN SVCall_IRQn 0 */
 
-  /* USER CODE END SVCall_IRQn 0 */
-  /* USER CODE BEGIN SVCall_IRQn 1 */
+//   /* USER CODE END SVCall_IRQn 0 */
+//   /* USER CODE BEGIN SVCall_IRQn 1 */
 
-  /* USER CODE END SVCall_IRQn 1 */
-}
+//   /* USER CODE END SVCall_IRQn 1 */
+// }
 
 /**
   * @brief This function handles Debug monitor.
@@ -167,29 +173,29 @@ void DebugMon_Handler(void)
 /**
   * @brief This function handles Pendable request for system service.
   */
-void PendSV_Handler(void)
-{
-  /* USER CODE BEGIN PendSV_IRQn 0 */
+// void PendSV_Handler(void)
+// {
+//   /* USER CODE BEGIN PendSV_IRQn 0 */
 
-  /* USER CODE END PendSV_IRQn 0 */
-  /* USER CODE BEGIN PendSV_IRQn 1 */
+//   /* USER CODE END PendSV_IRQn 0 */
+//   /* USER CODE BEGIN PendSV_IRQn 1 */
 
-  /* USER CODE END PendSV_IRQn 1 */
-}
+//   /* USER CODE END PendSV_IRQn 1 */
+// }
 
 /**
   * @brief This function handles System tick timer.
   */
-void SysTick_Handler(void)
-{
-  /* USER CODE BEGIN SysTick_IRQn 0 */
+// void SysTick_Handler(void)
+// {
+//   /* USER CODE BEGIN SysTick_IRQn 0 */
 
-  /* USER CODE END SysTick_IRQn 0 */
-  HAL_IncTick();
-  /* USER CODE BEGIN SysTick_IRQn 1 */
+//   /* USER CODE END SysTick_IRQn 0 */
+//   HAL_IncTick();
+//   /* USER CODE BEGIN SysTick_IRQn 1 */
 
-  /* USER CODE END SysTick_IRQn 1 */
-}
+//   /* USER CODE END SysTick_IRQn 1 */
+// }
 
 /******************************************************************************/
 /* STM32F4xx Peripheral Interrupt Handlers                                    */

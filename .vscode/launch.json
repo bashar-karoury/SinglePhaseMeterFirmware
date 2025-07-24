@@ -7,6 +7,7 @@
             "type": "cortex-debug",
             "cwd": "${workspaceFolder}",
             "executable": "${workspaceFolder}/build/Debug/MeterFirmware.elf",
+            "preLaunchTask": "Rebuild",
             "request": "launch",
             "servertype": "stlink",
             "device": "STM32F411RETx",
