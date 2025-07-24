@@ -84,11 +84,17 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+  volatile uint32_t _CFSR = SCB->CFSR;
+  volatile uint32_t _HFSR = SCB->HFSR;
+  volatile uint32_t _DFSR = SCB->DFSR;
+  volatile uint32_t _AFSR = SCB->AFSR;
+  volatile uint32_t _MMFAR = SCB->MMFAR;
+  volatile uint32_t _BFAR = SCB->BFAR;
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+    // You can inspect the above variables in a debugger to determine the cause of the hard fault.
     /* USER CODE END W1_HardFault_IRQn 0 */
   }
 }

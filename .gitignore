@@ -4,3 +4,4 @@ cmake_install.cmake
 build/
 CMakeFiles
 build.ninja
+CMakeCache.txt
