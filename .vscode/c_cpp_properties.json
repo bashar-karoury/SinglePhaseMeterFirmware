@@ -10,7 +10,19 @@
              */
             "name": "STM32",
             "configurationProvider": "ms-vscode.cmake-tools",
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "${default}",
+            "includePath": [
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/middleware/freertos/include",
+                "${workspaceFolder}/Core",
+                "${workspaceFolder}/middleware/freertos/portable/ARM_CM4F",
+                "${workspaceFolder}/Application/FirmwareUpdate",
+                "${workspaceFolder}/Application/Logging",
+                "${workspaceFolder}/Application/Metering"
+            ]
         }
     ]
 }

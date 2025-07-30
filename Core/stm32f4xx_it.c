@@ -18,8 +18,8 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
 #include "stm32f4xx_it.h"
+#include "stm32f4xx_hal.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -84,12 +84,6 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-  volatile uint32_t _CFSR = SCB->CFSR;
-  volatile uint32_t _HFSR = SCB->HFSR;
-  volatile uint32_t _DFSR = SCB->DFSR;
-  volatile uint32_t _AFSR = SCB->AFSR;
-  volatile uint32_t _MMFAR = SCB->MMFAR;
-  volatile uint32_t _BFAR = SCB->BFAR;
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
@@ -212,7 +206,6 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 
   /* USER CODE END EXTI15_10_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */

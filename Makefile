@@ -54,10 +54,13 @@ endif
 ######################################
 # C sources
 C_SOURCES =  \
-Src/main.c \
-Src/gpio.c \
-Src/stm32f4xx_it.c \
-Src/stm32f4xx_hal_msp.c \
+$(FREERTOS_SOURCE_DIR)/tasks.c \
+$(FREERTOS_SOURCE_DIR)/queue.c \
+$(FREERTOS_SOURCE_DIR)/list.c \
+$(FREERTOS_SOURCE_DIR)/timers.c \
+$(FREERTOS_SOURCE_DIR)/event_groups.c \
+$(FREERTOS_SOURCE_DIR)/heap_4.c \
+$(FREERTOS_PORT_DIR)/port.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
@@ -71,14 +74,12 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c \
-Src/system_stm32f4xx.c \
-$(FREERTOS_SOURCE_DIR)/tasks.c \
-$(FREERTOS_SOURCE_DIR)/queue.c \
-$(FREERTOS_SOURCE_DIR)/list.c \
-$(FREERTOS_SOURCE_DIR)/timers.c \
-$(FREERTOS_SOURCE_DIR)/event_groups.c \
-$(FREERTOS_SOURCE_DIR)/heap_4.c \
-$(FREERTOS_PORT_DIR)/port.c
+Core/main.c \
+Core/gpio.c \
+Core/stm32f4xx_it.c \
+Core/stm32f4xx_hal_msp.c \
+Core/system_stm32f4xx.c \
+Core/meterSystem.c \
 
 # ASM sources
 ASM_SOURCES =  \
@@ -132,20 +133,20 @@ C_DEFS =  \
 -DUSE_HAL_DRIVER \
 -DSTM32F411xE
 
-C_DEFS += -DARM_MATH_CM4 -D__FPU_PRESENT=1 -DconfigUSE_PREEMPTION=1
+C_DEFS += -DARM_MATH_CM4 -DconfigUSE_PREEMPTION=1
 
 # AS includes
 AS_INCLUDES = 
 
 # C includes
 C_INCLUDES =  \
--IInc \
 -IDrivers/STM32F4xx_HAL_Driver/Inc \
 -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
 -IDrivers/CMSIS/Include \
 -I$(FREERTOS_DIR)/include \
--I$(FREERTOS_PORT_DIR)
+-I$(FREERTOS_PORT_DIR) \
+-ICore
 
 
 # compile gcc flags

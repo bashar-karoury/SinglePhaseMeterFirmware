@@ -38,7 +38,7 @@ You can verify the Dev Containers extension is installed by checking in the **Ex
 3. **Reopen in Dev Container**:
 
    When prompted by VS Code, click **"Reopen in Container"**. 
-   ![alt text](Images/image_reopenContainer.png)
+   ![alt text](readme_resources/image_reopenContainer.png)
 
    This will:
    - Build the Docker image (first time only), there is a customized built Docker image for this dev environment 
@@ -48,7 +48,7 @@ You can verify the Dev Containers extension is installed by checking in the **Ex
 
 4. **Reload May Be Required**
 
-   ![alt text](Images/image_reloadRequired.png)
+   ![alt text](readme_resources/image_reloadRequired.png)
    ⚠️ On the first build, the `Cortex-Debug` extension may require a **reload** to initialize its native dependencies correctly. If you see errors or debugging doesn't work as expected you should click on reload OR you can open the Command Palette and run:
 
    ```
@@ -65,11 +65,11 @@ Convenient buttons are added to the **bottom status bar** for:
 - 🔁 **Rebuild** – Cleans and rebuilds the firmware.
 - ⚡ **Flash** – Uploads the binary to the connected STM32 target device.
 
-![alt text](Images/image_tasksButtonsStatusBar.png)
+![alt text](readme_resources/image_tasksButtonsStatusBar.png)
 
 - 🧪 **Debug** – Starts the debugger using the selected `.elf` binary and configuration.
-![alt text](Images/image_debug.png)
-![alt text](Images/image_debugPanel.png)
+![alt text](readme_resources/image_debug.png)
+![alt text](readme_resources/image_debugPanel.png)
 ---
 
 ## Included In Docker Image

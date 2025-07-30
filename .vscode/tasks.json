@@ -20,7 +20,7 @@
                 "--connect",
                 "port=swd",
                 "--download",
-                "${workspaceFolder}/build/output/MeterFirmware.elf",
+                "${workspaceFolder}/build/debug/MeterFirmware.elf",
                 "-hardRst",
                 "-rst",
                 "--start"
