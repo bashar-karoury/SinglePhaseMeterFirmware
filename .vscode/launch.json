@@ -6,7 +6,7 @@
             "name": "STM32 Debug (ST-LINK)",
             "type": "cortex-debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/Debug/MeterFirmware.elf",
+            "executable": "${workspaceFolder}/build/debug/MeterFirmware.elf",
             "preLaunchTask": "Rebuild",
             "request": "launch",
             "servertype": "stlink",
